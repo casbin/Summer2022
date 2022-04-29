@@ -51,7 +51,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 下列所有项目都与Casbin一致，采用开源协议：[Apache 2.0 license](LICENSE)
 
-- [Casbin（Go + Java）](#casbingo--java)
+- [Casbin核心权限库改进（Go + Java）](#casbin核心权限库改进go--java)
 - [Casbin文档中文翻译 + 官网优化](#casbin文档中文翻译--官网优化)
 - [Casbin.js核心前端库研发（前端Javascript + React + vue）](#casbinjs核心前端库研发前端javascript--react--vue)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
@@ -63,7 +63,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Lua-Casbin 开发（Lua）](#lua-casbin-开发lua)
 - [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
-### Casbin（Go + Java）
+### Casbin核心权限库改进（Go + Java）
 1. 项目名称：Casbin（Go + Java）
 2. 项目主导师：[唐阳 (Yang Tang)](https://github.com/tangyang9464), tangyang9464 (AT) 163.com
 3. 项目描述：Casbin采用独特的PERM模型语法（model）来实现强大、灵活的访问控制。Casbin Golang版本作为Casbin的第一个语言实现，拥有最多的用户以及最先进的feature。我们希望在Casbin Golang上： 1）增强Casbin语法的表达能力，满足用户多样化的策略制定需求； 2）优化Casbin在大规模规则集上（百万以上）的策略评估性能。 jCasbin是Casbin的Java版本，它需要及时跟踪Golang Casbin主库的最新feature并移植到Java版本中来。同时维护Java特有的生态
