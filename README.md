@@ -51,11 +51,10 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 下列所有项目都与Casbin一致，采用开源协议：[Apache 2.0 license](LICENSE)
 
-- [Casbin核心引擎（Golang）](#casbin核心引擎golang)
+- [Casbin（Go + Java）](#casbingo--java)
 - [Casbin文档中文翻译 + 官网优化](#casbin文档中文翻译--官网优化)
 - [Casbin.js核心前端库研发（前端Javascript + React + vue）](#casbinjs核心前端库研发前端javascript--react--vue)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
-- [jCasbin 生态完善（Java）](#jcasbin-生态完善java)
 - [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
 - [PyCasbin 生态完善（Python）](#pycasbin-生态完善python)
 - [PHP-Casbin 生态完善（PHP）](#php-casbin-生态完善php)
@@ -64,24 +63,25 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Lua-Casbin 开发（Lua）](#lua-casbin-开发lua)
 - [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
-### Casbin核心引擎（Golang）
-
-1. 项目标题：Casbin核心引擎（Golang）
-2. 项目描述：Casbin采用独特的PERM模型语法（model）来实现强大、灵活的访问控制。Casbin Golang版本作为Casbin的第一个语言实现，拥有最多的用户以及最先进的feature。我们希望在Casbin Golang上：1）增强Casbin语法的表达能力，满足用户多样化的策略制定需求；2）优化Casbin在大规模规则集上（百万以上）的策略评估性能。这两个目标是Casbin的核心竞争力，对于其他Casbin语言的实现也会起到非常重要的借鉴意义。
-3. 项目难度：高
-4. 项目社区导师：[罗杨 (hsluoyz)](https://github.com/hsluoyz)
-5. 导师联系方式：hsluoyz (AT) gmail.com
-6. 合作导师联系方式（选填）：无
+### Casbin（Go + Java）
+1. 项目名称：Casbin（Go + Java）
+2. 项目主导师：[唐阳 (Yang Tang)](https://github.com/tangyang9464), tangyang9464 (AT) 163.com
+3. 项目描述：Casbin采用独特的PERM模型语法（model）来实现强大、灵活的访问控制。Casbin Golang版本作为Casbin的第一个语言实现，拥有最多的用户以及最先进的feature。我们希望在Casbin Golang上： 1）增强Casbin语法的表达能力，满足用户多样化的策略制定需求； 2）优化Casbin在大规模规则集上（百万以上）的策略评估性能。 jCasbin是Casbin的Java版本，它需要及时跟踪Golang Casbin主库的最新feature并移植到Java版本中来。同时维护Java特有的生态
+4. 项目难度：进阶
+5. 涉及技术领域标签：Authorization
+6. 编程语言标签：Go, Java
 7. 项目产出要求：
    - 增强Casbin语法的表达能力，满足用户多样化的策略制定需求
    - 优化Casbin在大规模规则集上（百万以上）的策略评估性能
-   - 解决Casbin Golang主仓库&相关仓库中的issues：https://github.com/casbin/casbin/issues
+   - 跟踪Casbin-Go最新特性并移植到jCasbin，如实现WatcherEx:[casbin#943](https://github.com/casbin/casbin/issues/943)
+   - 维护完善jCasbin的Java特有生态，如实现Play框架中间件：[jcasbin#104](https://github.com/casbin/jcasbin/issues/104)
+   - 解决Casbin-Go和jCasbin以及相关仓库中的issues：[Casbin-Go](https://github.com/casbin/casbin/issues) & [jCasbin](https://github.com/casbin/jcasbin/issues)
 8. 项目技术要求：
-   - 熟悉Golang语言
+   - 熟悉Golang或Java语言
    - 熟悉Git、GitHub相关操作
-9. 相关的开源软件仓库列表：
+9. 项目成果仓库：
    - https://github.com/casbin/casbin
-   - https://github.com/casbin
+   - https://github.com/casbin/jcasbin
 
 ### Casbin文档中文翻译 + 官网优化
 
@@ -149,27 +149,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 项目成果仓库：
    - https://github.com/casdoor/casdoor
    - https://github.com/casbin/casnode
-
-### jCasbin 生态完善（Java）
-
-1. 项目标题：jCasbin 生态完善（Java）
-2. 项目描述：jCasbin 在 Java 平台上取得了不错的进展，但是我们仍然需要努力工作，以帮助 Casbin 成为世界上最受欢迎的身份授权库。目前Java语言上最流行的授权库是Apache Shiro和Spring Security，最流行的Web框架是Spring。我们需要实现Casbin针对Spring等框架的插件，使Spring用户可以无缝接入Casbin。同时要兼容Apache Shiro和Spring Security的接口，让目前正在使用Apache Shiro和Spring Security的项目可以无缝迁移到Casbin。同时jCasbin也需要及时跟踪Golang Casbin主库的最新feature并移植到Java版本中来。
-3. 项目难度：中
-4. 项目社区导师：[房政金 (Distance)](https://github.com/fangzhengjin)
-5. 导师联系方式：fangzhengjin (AT) gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 实现针对Spring，包括Spring Cloud，SpringBoot等的权限认证中间件
-   - 实现兼容Apache Shiro和Spring Security的接口
-   - 根据用户需求，实现缺失的数据库adapter
-   - 解决 jCasbin 主仓库&相关仓库中的 issues：https://github.com/casbin/jcasbin/issues
-8. 项目技术要求：
-   - 熟悉 Java 语言
-   - 熟悉 SQL
-   - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/jcasbin
-   - https://github.com/jcasbin
 
 ### Casbin-RS 生态完善（Rust）
 
