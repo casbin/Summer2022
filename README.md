@@ -52,6 +52,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 下列所有项目都与Casbin一致，采用开源协议：[Apache 2.0 license](LICENSE)
 
 - [Casbin核心权限库改进（Go + Java）](#casbin核心权限库改进go--java)
+- [Casbin核心权限库改进（Go + .NET）](#casbin核心权限库改进go--net)
 - [Casbin文档中文翻译 + 官网优化](#casbin文档中文翻译--官网优化)
 - [Casbin.js核心前端库研发（前端Javascript + React + vue）](#casbinjs核心前端库研发前端javascript--react--vue)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
@@ -82,6 +83,27 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 项目成果仓库：
    - https://github.com/casbin/casbin
    - https://github.com/casbin/jcasbin
+
+
+### Casbin核心权限库改进（Go + .NET）
+1. 项目名称：Casbin（Go + .NET）
+2. 项目主导师：[汤贤赫 (Sagilio)](https://github.com/sagilio), sagilio (AT) outlook.com
+3. 项目描述：Casbin采用独特的PERM模型语法（model）来实现强大、灵活的访问控制。Casbin Golang版本作为Casbin的第一个语言实现，拥有最多的用户以及最先进的feature。我们希望在Casbin Golang上： 1）增强Casbin语法的表达能力，满足用户多样化的策略制定需求； 2）优化Casbin在大规模规则集上（百万以上）的策略评估性能。 Casbin.NET是Casbin的.NET版本，它需要及时跟踪Golang Casbin主库的最新feature并移植到.NET版本中来。并维护.NET特有的生态
+4. 项目难度：进阶
+5. 涉及技术领域标签：Authorization
+6. 编程语言标签：Go, C#(.NET)
+7. 项目产出要求：
+   - 增强Casbin语法的表达能力，满足用户多样化的策略制定需求
+   - 优化Casbin在大规模规则集上（百万以上）的策略评估性能
+   - 跟踪Casbin-Go最新特性与BUG修复，并同步到Casbin.NET，如重构的RoleManager:[Casbin.NET#250](https://github.com/casbin/Casbin.NET/issues/250)
+   - 完善Casbin.NET的特有生态, 1) 完善现有的aspnetcore中间件：https://github.com/casbin-net/casbin-aspnetcore; 2) 完善Casdoor.SDK的.NET版本: https://github.com/casdoor/casdoor-dotnet-sdk
+   - 解决Casbin-Go和Casbin.NET以及相关仓库中的issues：[Casbin-Go](https://github.com/casbin/casbin/issues) & [Casbin.NET](https://github.com/casbin/Casbin.NET/issues)
+8. 项目技术要求：
+   - 熟悉Golang或C#语言
+   - 熟悉Git、GitHub相关操作
+9. 项目成果仓库：
+   - https://github.com/casbin/casbin
+   - https://github.com/casbin/Casbin.NET
 
 ### Casbin文档中文翻译 + 官网优化
 
