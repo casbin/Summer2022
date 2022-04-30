@@ -57,11 +57,9 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casbin.js核心前端库研发（前端Javascript + React + vue）](#casbinjs核心前端库研发前端javascript--react--vue)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
 - [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
-- [PyCasbin 生态完善（Python）](#pycasbin-生态完善python)
-- [PHP-Casbin 生态完善（PHP）](#php-casbin-生态完善php)
+- [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
 - [Casbin Mesh (Golang) ](#casbin-mesh-golang)
 - [SwiftCasbin 开发（Swift）](#swiftcasbin-开发swift)
-- [Lua-Casbin 开发（Lua）](#lua-casbin-开发lua)
 - [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
 ### Casbin核心权限库改进（Go + Java）
@@ -195,44 +193,30 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin-rs
    - https://github.com/casbin-rs
 
-### PyCasbin 生态完善（Python）
+### Python/PHP-Casbin 生态完善（Python/PHP）
 
-1. 项目标题：PyCasbin 生态完善（Python）
-2. 项目描述：PyCasbin 是Casbin的Python版实现，功能和 Casbin（Golang）基本一致。目前，PyCasbin实现了Casbin的主要功能，但还有少许功能尚未实现，另外代码质量还有调优的可能，PyCasbin对周边框架的支持不够完善，所以我们希望对PyCasbin进行完善和优化，同时需要对PyCasbin的生态予以完善。
-3. 项目难度：中
-4. 项目社区导师：[李强 (techoner)](https://github.com/techoner)
-5. 导师联系方式：techqiang (AT) gmail.com
-6. 合作导师联系方式（选填）：无
+1. 项目名称：Python/PHP-Casbin 生态完善（Python/PHP）
+2. 项目主导师：[李强 (Jon Lee)](https://github.com/leeqvip), leeqvip (AT) gmail.com
+3. 项目描述：Casbin 是一个强大的、高效的开源访问控制框架，对主流语言都有相关实现，包括Python、PHP版本的Casbin。Casbin在业界具有广泛影响力，社区活跃。目前，目前PyCasbin/PHP-Casbin主库主要功能虽然相对完善和稳定，但仍然需要不断迭代演进，特别是对Python和PHP生态内各种框架、插件的集成，代码质量和性能还有调优的可能，所以我们希望对主库及其周边生态系统进行完善和优化，以增强Casbin在脚本语言Python和PHP领域的应用场景，提高外部系统接入Casbin效率和成本，进而扩大Casbin在Python和PHP领域的生态圈，使其能更好更快的发展。
+4. 项目难度：进阶
+5. 涉及技术领域标签：Authorization、API
+6. 编程语言标签：Python，PHP，Go
 7. 项目产出要求：
-   - 完善PyCasbin，和Casbin（Golang）保持一致
-   - 在保证功能、结构不变的情况下，调优代码质量
-   - 解决PyCasbin仓库中的issues：https://github.com/casbin/pycasbin/issues
+   - 对分布式存储系统`ETCD`的适配`etcd-adapter`
+   - 完善Py/PHP-Casbin的对Redis（`redis-adapter`）适配器
+   - 对权限决策`enforce()`的过程做基准测试、弱点分析、性能优化
+   - 增加`addPermissionsForUser()` API.
+   - 增加对`g`方法的缓存, 参考: https://github.com/casbin/casbin/blob/master/util/builtin_operators.go#L333.
+   - 实现和完善[WatcherEx](https://casbin.org/docs/en/watchers#watcherex)
+   - 引入Casbin核心引擎[Casbin Core Engine (Golang)](https://github.com/casbin/casbin/releases)中的新功能
+   - 对主流框架的支持增强，例如：如果在Python的`Django`的扩展中, 需要引入Django的`Middleware`, `Caching`, `Logging`, 集成`Django`的认证系统（authentication system）；而PHP主流框架Laravel中已有[Laravel-Authz](https://github.com/php-casbin/laravel-authz)，但需要引入Laravel的[Gates](https://laravel.com/docs/9.x/authorization#gates)等
+   - 解决[PyCasbin](https://github.com/casbin/pycasbin)或[PHP-Casbin](https://github.com/php-casbin/php-casbin)主库以及相关仓库中的issues
 8. 项目技术要求：
-   - 熟悉Python语言
-   - 熟悉Casbin其他任意一种语言的实现
+   - 熟悉Python、PHP任意一种语言即可
    - 熟悉Git、GitHub相关操作
-9. 相关的开源软件仓库列表：
+9. 项目成果仓库：
    - https://github.com/casbin/pycasbin
    - https://github.com/pycasbin
-
-### PHP-Casbin 生态完善（PHP）
-
-1. 项目标题：PHP-Casbin 生态完善（PHP）
-2. 项目描述：[PHP-Casbin](https://github.com/php-casbin/php-casbin) 是Casbin的PHP版实现，功能和 Casbin（Golang）基本一致。目前，PHP-Casbin已经支持对`Laravel` `ThinkPHP` `Yii` `Codeigniter` `CakePHP` 等主流框架的适配。目前还需要开发对`Symfony`的扩展，C级别的框架进行支持，例如：`Phalcon Framework`，基于Swoole的框架支持，例如： `Hyperf` `easyswoole`等。除此之外，我们也希望Casbin有个PHP的C/C++扩展，以提升性能。
-3. 项目难度：高
-4. 项目社区导师：[李强 (techoner)](https://github.com/techoner)
-5. 导师联系方式：techqiang (AT) gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 完成 [Symfony-Permission](https://github.com/php-casbin/symfony-permission)
-   - 对C级别的框架进行支持，例如：`Phalcon Framework`
-   - 对基于Swoole的框架支持，例如： `Hyperf` `easyswoole`等
-   - PHP的C/C++扩展，可以基于[Casin-cpp](https://github.com/casbin/casbin-cpp)，也可以考虑通过`zephir`实现
-   - 解决PHP-Casbin仓库中的issues：https://github.com/php-casbin/php-casbin/issues
-8. 项目技术要求：
-   - 熟悉PHP语言
-   - 熟悉Git、GitHub相关操作
-9. 相关的开源软件仓库列表：
    - https://github.com/php-casbin/php-casbin
    - https://github.com/php-casbin
 
@@ -280,26 +264,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/SwiftCasbin
    - https://github.com/SwiftCasbin
-
-### Lua-Casbin 开发（Lua）
-
-1. 项目标题：Casbin-Lua 开发（Lua）
-2. 项目描述：开发Lua版本的Casbin，支持Nginx、OpenResty等Lua生态。
-3. 项目难度：中
-4. 项目社区导师：[李强 (techoner)](https://github.com/techoner)
-5. 导师联系方式：techqiang (AT) gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 实现 Casbin 的 Lua 版本
-   - 实现纯数据库驱动的 adapter: PostgresQL, Mysql, Microsoft SQL Server, Oracle, SQLite, IBM Db2.
-   - 解决 Lua-Casbin 主仓库&相关仓库中的 issues：https://github.com/casbin/casbin-lua/issues
-8. 项目技术要求：
-   - 熟悉 Lua 语言
-   - 熟悉 Nginx、OpenResty 等
-   - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-lua
-   - https://github.com/casbin-lua
 
 ### Casbin Web前端UI设计开发（React + Javascript）
 
