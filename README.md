@@ -59,7 +59,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
 - [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
 - [Casbin Mesh (Golang) ](#casbin-mesh-golang)
-- [SwiftCasbin 开发（Swift）](#swiftcasbin-开发swift)
+- [SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持](#swiftcasbin-开发swift或casdoor单点登录系统大前端支持)
 - [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
 ### Casbin核心权限库改进（Go + Java）
@@ -245,25 +245,31 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin
    - https://github.com/casbin/hraft-dispatcher
 
-### SwiftCasbin 开发（Swift）
+### SwiftCasbin 开发（Swift）或Casdoor单点登录系统大前端支持
 
-1. 项目标题：SwiftCasbin 开发（Swift）
-2. 项目描述：开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。
-3. 项目难度：高
-4. 项目社区导师：[孟祥文 (cit117)](https://github.com/cit117)
-5. 导师联系方式：cit117 (AT) me.com
-6. 合作导师联系方式（选填）：无
+1. 项目名称：SwiftCasbin 开发（Swift）SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持。
+2. 项目主导师：[孟祥文 (xiaobeiswift)](https://github.com/xiaobeiswift) cit117 (AT) me.com
+3. 项目描述：开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。Casdoor单点登录系统大前端应用 ios、安卓、flutter、uinapp、小程序等sdk的开发
+4. 项目难度：进阶
+5. 涉及技术领域标签：Authorization,SDK,Casdoor,App
+6. 编程语言标签：swift,dart,java,kotlin,js
 7. 项目产出要求：
    - 实现 Casbin 的 Swift 版本
    - 实现纯数据库驱动的 adapter: PostgresQL, Mysql, Microsoft SQL Server, Oracle, SQLite, IBM Db2.
    - 解决 SwiftCasbin 主仓库&相关仓库中的 issues：https://github.com/casbin/SwiftCasbin/issues
+   - 设计前端友好的casdoor api,完成安卓，ios，flutter，uniapp，小程序的sdk
+   - 每个sdk演示app的开发及文档完善。
 8. 项目技术要求：
-   - 熟悉 Swift 语言
-   - 熟悉 iOS App 开发等
+   - 熟悉 Swift/Dart/Java/Kotlin/js 语言的一种
+   - 熟悉 iOS/andriod/flutter一种原生开发或小程序/uniapp框架的使用
+   - 了解Oauth2流程
    - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
+9. 项目成果仓库：
    - https://github.com/casbin/SwiftCasbin
    - https://github.com/SwiftCasbin
+   - https://github.com/casdoor/casdoor-ios-sdk
+   - https://github.com/casdoor/casdoor-android-sdk
+   - https://github.com/casdoor/casdoor-dart-sdk
 
 ### Casbin Web前端UI设计开发（React + Javascript）
 
