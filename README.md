@@ -60,6 +60,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
 - [Casbin Mesh (Golang) ](#casbin-mesh-golang)
 - [SwiftCasbin 开发（Swift）](#swiftcasbin-开发swift)
+- [Casdoor单点登录系统大前端应用 (ios + android + flutter + uinapp + 小程序)](#Casdoor单点登录系统大前端应用-ios--android--flutter--uinapp--小程序)
 - [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
 ### Casbin核心权限库改进（Go + Java）
@@ -250,7 +251,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 1. 项目标题：SwiftCasbin 开发（Swift）
 2. 项目描述：开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。
 3. 项目难度：高
-4. 项目社区导师：[孟祥文 (cit117)](https://github.com/cit117)
+4. 项目社区导师：[孟祥文 (xiaobeiswift)](https://github.com/xiaobeiswift)
 5. 导师联系方式：cit117 (AT) me.com
 6. 合作导师联系方式（选填）：无
 7. 项目产出要求：
@@ -264,7 +265,29 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 相关的开源软件仓库列表：
    - https://github.com/casbin/SwiftCasbin
    - https://github.com/SwiftCasbin
+  
+### Casdoor单点登录系统大前端应用 (ios + android + flutter + uinapp + 小程序)
 
+1. 项目标题：Casdoor单点登录系统大前端应用(ios、安卓、flutter、uinapp、小程序等)
+2. 项目描述：Casdoor是一套基于基于OAuth 2.0 / OIDC协议的统一身份认证（单点登录）系统。其支持多种第三方登录方式，如QQ、微信、Google, GitHub等。Casdoor具有Web管理界面，可以用来管理用户、角色、权限（基于Casbin）。目前Casdoor系统对于ios，安卓，flutter，uniapp，小程序的支持还在初级阶段，我们需要实现前端的sdk设计，构建和发布，完善前端生态。
+3. 项目难度：高
+4. 项目社区导师：[孟祥文 (xiaobeiswift)](https://github.com/xiaobeiswift)
+5. 导师联系方式：cit117 (AT) me.com
+6. 合作导师联系方式（选填）：无
+7. 项目产出要求：
+   - 设计前端友好的api,完成安卓，ios，flutter，uniapp，小程序的sdk
+   - 每个sdk演示app的开发及文档完善。
+8. 项目技术要求：
+   - 了解Oauth2流程
+   - 熟悉ios，安卓原生开发，及相关组件的使用(如Webview，SafariController等）
+   - 熟悉flutter框架及dart语言，
+   - 熟悉uniapp框架，js语言及小程序开发
+   - 熟悉 Git、GitHub 相关操作
+9. 相关的开源软件仓库列表：
+   - https://github.com/casdoor/casdoor-ios-sdk
+   - https://github.com/casdoor/casdoor-android-sdk
+   - https://github.com/casdoor/casdoor-dart-sdk
+   
 ### Casbin Web前端UI设计开发（React + Javascript）
 
 1. 项目标题：Casbin 前端设计开发（React + Javascript）
@@ -325,3 +348,4 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 ### 2. 官网投递（2022年5月21日至2022年6月4日）
 
 详见：https://summer-ospp.ac.cn/help/
+
