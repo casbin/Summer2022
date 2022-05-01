@@ -59,7 +59,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
 - [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
 - [Casbin Mesh (Golang) ](#casbin-mesh-golang)
-- [SwiftCasbin 开发（Swift)及Casdoor单点登录系统大前端支持](#swiftcasbin-开发swift)
+- [SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持](#swiftcasbin-开发swift或casdoor单点登录系统大前端支持)
 - [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
 ### Casbin核心权限库改进（Go + Java）
@@ -245,9 +245,9 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin
    - https://github.com/casbin/hraft-dispatcher
 
-### SwiftCasbin 开发（Swift）及Casdoor单点登录系统大前端支持
+### SwiftCasbin 开发（Swift）或Casdoor单点登录系统大前端支持
 
-1. 项目名称：SwiftCasbin 开发（Swift）SwiftCasbin 开发（Swift）及Casdoor单点登录系统大前端支持。
+1. 项目名称：SwiftCasbin 开发（Swift）SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持。
 2. 项目主导师：[孟祥文 (xiaobeiswift)](https://github.com/xiaobeiswift) cit117 (AT) me.com
 3. 项目描述：开发Swift版本的Casbin，支持iOS App、Swift服务器端应用等生态。Casdoor单点登录系统大前端应用 ios、安卓、flutter、uinapp、小程序等sdk的开发
 4. 项目难度：进阶
