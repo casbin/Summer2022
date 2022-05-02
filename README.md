@@ -54,9 +54,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casbin核心权限库改进（Go + Java）](#casbin核心权限库改进go--java)
 - [Casbin核心权限库改进（Go + .NET）](#casbin核心权限库改进go--net)
 - [Casbin/Casdoor 文档优化](#casbincasdoor-文档优化)
-- [Casbin.js核心前端库研发（前端Javascript + React + vue）](#casbinjs核心前端库研发前端javascript--react--vue)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
-- [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
 - [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
 - [SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持](#swiftcasbin-开发swift或casdoor单点登录系统大前端支持)
 
@@ -122,28 +120,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin-website
    - https://github.com/casdoor/casdoor-website
 
-### Casbin.js核心前端库研发（前端Javascript + React + vue）
-
-1. 项目标题：Casbin.js核心前端库研发（前端Javascript + React + vue）
-2. 项目描述：Casbin本身专注于服务器端（后端）的访问控制、权限管理，然而Web App（前端）也有权限管理的需求：如列出当前登录用户有权访问的所有列表项，或当前用户无权进行删除帖子的操作，则把删除按钮变灰或隐藏等等。因此Casbin推出专门用于前端权限展示的开源库：[Casbin.js](https://github.com/casbin/casbin.js) 。该库主要实现2个功能：1）调用后端Casbin（可能是Go，也可能是Java等）提供的接口（RESTful或cookie等方式），获取当前登录用户的权限；2）将获取到的权限转换为列表、按钮的显示状态。Casbin.js在GSoC 2020期间已经研发了3个月，但是目前从功能、适配性、可用性等方面离最终完成还仍有很大距离。之前的研发文档、记录可从此处获得：https://github.com/casbin/casbin.js/issues 。
-3. 项目难度：高
-4. 项目社区导师：[刘梓晖 (kingiw)](https://github.com/kingiw)
-5. 导师联系方式：kingiw (AT) hotmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 大规模重构、改造、完善[Casbin.js](https://github.com/casbin/casbin.js) ，从功能、适配性、可用性上达到类似CASL项目：https://github.com/stalniy/casl
-   - 完成核心主库Casbin.js的开发，推送到NPM。同时类似CASL项目，包装出React、Vue等框架的适配器，方便React、Vue用户使用
-   - 开发至少一种后端语言（如Go Casbin）的对接Casbin.js的API接口，从而使后端把权限传给前端的Casbin.js
-   - 解决Casbin.js主仓库&相关仓库中的issues：https://github.com/casbin/casbin.js/issues
-8. 项目技术要求：
-   - 熟悉HTML、Javascript、CSS等前端技术
-   - 熟悉React或Vue框架，两种都熟悉更好
-   - 熟悉NPM包管理，熟悉Git、GitHub相关操作
-   - 至少了解一种后端语言，如Go、Java、Python、Node.js、Rust等，有全栈工程师相关经验；
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin.js
-   - https://github.com/casbin-js
-
 ### Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）
 
 1. 项目名称：Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）
@@ -166,29 +142,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 9. 项目成果仓库：
    - https://github.com/casdoor/casdoor
    - https://github.com/casbin/casnode
-
-### Casbin-RS 生态完善（Rust）
-
-1. 项目标题：Casbin-RS 生态完善（Rust）
-2. 项目描述：Casbin Rust 目前尚缺乏各个主流 Rust Web 框架的集成，以及对于 `Raft协议` 的完善。此议题希望学生独立完成对于 [Warp](https://github.com/seanmonstar/warp) 、[Tide](https://github.com/http-rs/tide) 框架的中间件集成；独立完成 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 的重构实现。
-3. 项目难度：高
-4. 项目社区导师：[柴轶晟 (Hackerchai)](https://github.com/hackerchai)
-5. 导师联系方式：i (AT) hackerchai.com
-6. 合作导师联系方式（选填）：psiace (AT) outlook.com
-7. 项目产出要求：
-   - 针对 [Warp](https://github.com/seanmonstar/warp) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明，并且实现一个完备的实际应用样例
-   - 针对 [Tide](https://github.com/http-rs/tide) 框架实现 casbin 中间件实现，包含正确，充足的单元/集成测试以及完备的文档说明，并且实现一个完备的实际应用样例
-   - 完善 [Casbin-Raft](https://github.com/casbin-rs/casbin-raft) 实现   Rust 版本 [Casbin-Raft (Go)](https://github.com/casbin/casbin-raft) ,使用 [Raft-rs](https://github.com/tikv/raft-rs) 框架实现完备的  `Raft` 协议支持；参考 [hraft-dispatcher（Go）](https://github.com/casbin/hraft-dispatcher) 对 [Casbin-Raft（Go）](https://github.com/casbin-rs/casbin-raft) 进行重构，设计正确，充足的单元/集成测试以确保可用性，完成相应的文档工作。架构可以参考  [toshi（Rust）](https://github.com/toshi-search/Toshi) 或者 [MeiliSearch-Raft](https://github.com/meilisearch/MeiliSearch/tree/raft)；要求可以投入实际生产环境
-   - 解决 Casbin Rust 主仓库和相关仓库中的 issues ：https://github.com/casbin/casbin-rs/issues
-8. 项目技术要求：
-   - 熟悉Rust语言
-   - 熟悉Git、GitHub相关操作
-   - 熟练掌握一种后端框架，对于中间件，数据库操作有一定了解
-   - 熟悉 `RPC` 工作原理，了解一定的云原生开发
-   - 熟悉 `Raft` 协议工作原理
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin-rs
-   - https://github.com/casbin-rs
 
 ### Python/PHP-Casbin 生态完善（Python/PHP）
 
