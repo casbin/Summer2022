@@ -53,14 +53,12 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 
 - [Casbin核心权限库改进（Go + Java）](#casbin核心权限库改进go--java)
 - [Casbin核心权限库改进（Go + .NET）](#casbin核心权限库改进go--net)
-- [Casbin文档中文翻译 + 官网优化](#casbin文档中文翻译--官网优化)
+- [Casbin/Casdoor 文档优化](#casbincasdoor-文档优化)
 - [Casbin.js核心前端库研发（前端Javascript + React + vue）](#casbinjs核心前端库研发前端javascript--react--vue)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
 - [Casbin-RS 生态完善（Rust）](#casbin-rs-生态完善rust)
 - [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
-- [Casbin Mesh (Golang) ](#casbin-mesh-golang)
 - [SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持](#swiftcasbin-开发swift或casdoor单点登录系统大前端支持)
-- [Casbin Web前端UI设计开发（React + Javascript）](#casbin-web前端ui设计开发react--javascript)
 
 ### Casbin核心权限库改进（Go + Java）
 1. 项目名称：Casbin（Go + Java）
@@ -103,27 +101,26 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casbin/casbin
    - https://github.com/casbin/Casbin.NET
 
-### Casbin文档中文翻译 + 官网优化
+### Casbin/Casdoor 文档优化
 
-1. 项目标题：Casbin文档中文翻译 + 官网优化
-2. 项目描述：Casbin官网（https://casbin.org/ ）基于开源文档工具[Docusaurus](https://docusaurus.io/ )构建（基于React），采用Docusaurus所集成的[CrowdIn](https://crowdin.com/project/casbin )在线翻译平台进行众包翻译。Casbin官网原始文档均为英文，由CrowdIn上的贡献者自愿将英文翻译为其他各语言（如中文，韩文等）。但是目前各语言的翻译率较低，中文翻译率目前仅有15%，不利于开源项目在国内推广。因此希望能够将中文翻译率提高到100%。并且该项目也会承担一部分Casbin社区推广（如Casbin官方微信公众号）文章的撰写编辑、公众号管理等临时任务。
-3. 项目难度：中
-4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
-5. 导师联系方式：nodeces (AT) gmail.com
-6. 合作导师联系方式（选填）：无
+1. 项目标题：Casbin/Casdoor 文档优化
+2. 项目主导师：[刘子轩 (nodece)](https://github.com/nodece), nodeces (AT) gmail.com
+3. 项目描述：Casbin和Casdoor是Casbin社区的出色项目，他们的官网和文档都是使用[Docusaurus](https://docusaurus.io/)框架进行搭建，文档翻译是使用[CrowdIn](https://crowdin.com/)在线翻译平台进行众包翻译，随着项目的不断发展，文档与代码会存在一定的落差。文档是软件的重要组成部分，改进文档提升用户体验是不可或缺的部分。
+4. 项目难度：基础
+5. 涉及技术领域标签：Authorization, Authentication
+6. 编程语言标签：JavaScript, Golang
 7. 项目产出要求：
-   - 在CrowdIn翻译平台将Casbin官网英文内容翻译为中文，进度翻译至100%（目前为15%）
-   - （可选）改进官网功能、优化内容排版，增加新的文档内容
+   - 改进Casbin API文档，同步各个语言的API
+   - 改进Casdoor文档整体体验，梳理Casdoor各个功能，并对文档进行整体优化
    - （有时）撰写、编辑Casbin社区推广（如Casbin官方微信公众号）文章
-   - 解决Casbin-website主仓库&相关仓库中的issues：https://github.com/casbin/casbin-website/issues
 8. 项目技术要求：
    - 热爱并有能力撰写技术博客、文章
-   - 了解React框架和NPM包管理
    - 了解Git、GitHub相关操作
    - 了解Casbin的工作原理
-9. 相关的开源软件仓库列表：
+   - 了解Casdoor的工作原理
+9. 项目成果仓库：
    - https://github.com/casbin/casbin-website
-   - https://github.com/casbin/casbin.github.io
+   - https://github.com/casdoor/casdoor-website
 
 ### Casbin.js核心前端库研发（前端Javascript + React + vue）
 
@@ -220,31 +217,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/php-casbin/php-casbin
    - https://github.com/php-casbin
 
-### Casbin Mesh (Golang)
-
-1. 项目标题：Casbin Mesh (Golang)
-2. 项目描述：Casbin Mesh 是一个管理多个访问控制应用的系统，我们将会使用 Casbin + Raft 协议构建开箱即用、可伸缩的访问管理服务，用户可以在任意服务上更新、查找规则集以及检查规则。
-3. 项目难度：高
-4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
-5. 导师联系方式：nodeces@gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 基于 Raft + TCP(with TLS) 提供可伸缩性服务
-   - 正确，充足的单元/集成测试，确保程序运行的正确性
-   - 支持在 Leader 或者 Follower 节点更新、查找规则集以及检查规则
-   - 提供身份认证系统保护系统的安全，例如第三方客户端的接入
-   - 提供 Go SDK 访问该系统
-   - 提供 WEB/CLI 管理用户的访问控制应用
-   - 提供安全审计
-
-8. 项目技术要求：
-   - 熟悉 Golang
-   - 熟悉 Raft
-
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casbin
-   - https://github.com/casbin/hraft-dispatcher
-
 ### SwiftCasbin 开发（Swift）或Casdoor单点登录系统大前端支持
 
 1. 项目名称：SwiftCasbin 开发（Swift）SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持。
@@ -270,26 +242,6 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casdoor/casdoor-ios-sdk
    - https://github.com/casdoor/casdoor-android-sdk
    - https://github.com/casdoor/casdoor-dart-sdk
-
-### Casbin Web前端UI设计开发（React + Javascript）
-
-1. 项目标题：Casbin 前端设计开发（React + Javascript）
-2. 项目描述：目前Casbin社区有多个涉及Web前端的项目，如OA系统、Casnode论坛、Casdoor等。这些系统本身已经有一个功能完整的前端页面，但是UI比较简陋，因此需要较为专业的前端设计+开发实现更好的UI。
-3. 项目难度：中
-4. 项目社区导师：[刘子轩 (nodece)](https://github.com/nodece)
-5. 导师联系方式：nodeces@gmail.com
-6. 合作导师联系方式（选填）：无
-7. 项目产出要求：
-   - 改进Casbin社区各个项目的Web前端页面的设计，包括提供图片、切图，调整页面元素尺寸、布局，改进交互效果、动画效果等
-   - 在现有的功能完整但UI较为简陋的代码基础上，修改React, Javascript代码，提升UI效果
-8. 项目技术要求：
-   - 熟悉Web前端设计，包括切图、布局、交互等
-   - 熟悉HTML、CSS，能够编写React + Javascript代码来实现所提出的UI设计
-   - 熟悉 Git、GitHub 相关操作
-9. 相关的开源软件仓库列表：
-   - https://github.com/casbin/casdoor
-   - https://github.com/casbin/casnode
-   - https://github.com/casbin/casbin-oa
 
 所有可选项目详见：https://github.com/casbin/Summer2022#可选项目列表
 
