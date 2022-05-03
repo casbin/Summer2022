@@ -55,7 +55,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 - [Casbin核心权限库改进（Go + .NET）](#casbin核心权限库改进go--net)
 - [Casbin/Casdoor 文档优化](#casbincasdoor-文档优化)
 - [Casdoor单点登录系统、Casnode社区系统（前端React + JS，后端Go）](#casdoor单点登录系统casnode社区系统前端react--js后端go)
-- [Python/PHP-Casbin 生态完善（Python/PHP）](#pythonphp-casbin-生态完善pythonphp)
+- [Python/PHP-Casbin 在分布式系统和主流框架下的应用扩展开发（Python/PHP）](#pythonphp-casbin-在分布式系统和主流框架下的应用扩展开发pythonphp)
 - [SwiftCasbin 开发（Swift)或Casdoor单点登录系统大前端支持](#swiftcasbin-开发swift或casdoor单点登录系统大前端支持)
 
 ### Casbin核心权限库改进（Go + Java）
@@ -143,7 +143,7 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
    - https://github.com/casdoor/casdoor
    - https://github.com/casbin/casnode
 
-### Python/PHP-Casbin 生态完善（Python/PHP）
+### Python/PHP-Casbin 在分布式系统和主流框架下的应用扩展开发（Python/PHP）
 
 1. 项目名称：Python/PHP-Casbin 生态完善（Python/PHP）
 2. 项目主导师：[李强 (Jon Lee)](https://github.com/leeqvip), leeqvip (AT) gmail.com
