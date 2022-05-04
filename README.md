@@ -108,8 +108,10 @@ Casbin是一个强大的、高效的开源访问控制框架。涉及到Go, Java
 5. 涉及技术领域标签：Authorization, Authentication
 6. 编程语言标签：JavaScript, Golang
 7. 项目产出要求：
-   - 改进Casbin API文档，同步各个语言的API
-   - 改进Casdoor文档整体体验，梳理Casdoor各个功能，并对文档进行整体优化
+   - 同步Casbin以支持的语言的management API和rabc API到Casbin文档中的API模块
+   - 改进Casdoor文档整体体验，梳理Casdoor各个功能，对文档内容和布局进行优化
+   - 对Casbin文档进行英译汉，当前进度86%，目标进度100%
+   - 对Casdoor文档进行英译汉，当前进度80%，目标进度100%
    - （有时）撰写、编辑Casbin社区推广（如Casbin官方微信公众号）文章
 8. 项目技术要求：
    - 热爱并有能力撰写技术博客、文章
